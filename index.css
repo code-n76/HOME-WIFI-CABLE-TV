@@ -1,0 +1,131 @@
+:root {
+  --time_btn: rgb(40, 167, 69);
+  --time_btn-hvr-actv: rgb(36, 150, 62);
+  --fb_btn: rgb(0, 123, 255);
+  --fb_btn-hvr-actv: rgb(0, 110, 229);
+  --iptv_btn: rgb(213, 82, 9);
+  --iptv_btn-hvr-actv: rgb(191, 73, 8);
+  --iptv2_btn: rgb(255, 193, 7);
+  --iptv2_btn-hvr-actv: rgb(229, 173, 6);
+  --bak-clr: rgba(231, 194, 236, 1);
+}
+
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+@font-face {
+  font-family: "space-tech-italic";
+  src: url(./font/space-tech-italic.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.disable-text-selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--bak-clr);
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  --max-width: 30rem;
+  width: min(100% - 0rem, var(--max-width));
+  transition: transform 0.5s ease-in-out;
+}
+
+main .carousel-img {
+  height: 250px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.m-container {
+  display: block;
+  position: relative;
+  --max-width: 25rem;
+  width: min(95% - 0rem, var(--max-width));
+  border-radius: 24px;
+  align-items: center;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  clear: both;
+}
+
+main.active {
+  opacity: 1;
+}
+
+#success-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 512px;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#success-container.active {
+  bottom: 20%;
+}
+
+.success-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  text-align: center;
+  background-color: var(--bak-clr);
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 0px 9999px var(--bak-clr);
+  box-shadow: 0px 0px 0px 9999px var(--bak-clr);
+  z-index: -2;
+}
+
+/* MEDIA QUERY FOR RESPONSIVE UNDER 500PX WIDTH (SMALL DEVICES) */
+@media (max-width: 500px) {
+  body {
+    padding: 0 !important;
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}

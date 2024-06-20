@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(./font/sf-pro-regular.OTF);
+}
+@font-face {
+  font-family: "space-tech-italic";
+  src: url(./font/space-tech-italic.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "sf-pro-regular", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start of iptv_btn */
+.iptv_btn {
+  font-size: 16px;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  background: var(--iptv_btn);
+  border-radius: 48px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.iptv_btn:active,
+.iptv_btn:hover {
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--iptv_btn-hvr-actv);
+  border: none;
+  outline: none;
+}
+
+.iptv2_btn {
+  font-size: 16px;
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+  background: var(--iptv2_btn);
+  border-radius: 48px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.iptv2_btn:active,
+.iptv2_btn:hover {
+  color: var(--black);
+  text-decoration: none;
+  background-color: var(--iptv2_btn-hvr-actv);
+  border: none;
+  outline: none;
+}
+/* End of iptv_btn */
+
+/* Start of IPTV MESSAGE */
+.iptv-msg {
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin-top: 30px;
+}
+/* End of IPTV MESSAGE */
